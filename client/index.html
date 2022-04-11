@@ -1,3 +1,5 @@
+<!-- Created by Bryan Pham -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +27,12 @@
     </div>
 
     <div class="search-bar-container">
-        <div class="search-bar-header"> Search Dining Halls</div>
+        <div class="search-bar-header"> Search Food In Dining Halls</div>
         <div class="input-container">
-            <input class="search-bar-input" type="text" placeholder="The Diner">
+            <input class="search-bar-input" type="text" placeholder="Pizza">
             <button class ='search-button'>Search</button>
         </div>
+        <small class="search-confirmation">Search Results below!</small>
         <div class="search-history">
             <div class="search-history-header">Search History</div>
             <div class = 'search-history-item'>Your search history appears on dropdown below</div>
@@ -42,7 +45,44 @@
         </div>
     </div>
 
-    <div class="cards-container-header">Suggested Dining Areas</div>
+
+    <div class="results-container">
+        <div class="results-header">Search Results For Cheese Pizza</div>
+        <div class="results-row">
+
+            <!--
+
+            <div class="result-entry">
+                <div class="entry-header">Food</div>
+                <div class="entry-value">Cheese Pizza</div>
+                <div class="entry-header">Location</div>
+                <div class="entry-value">The Diner</div>
+                <div class="entry-header">Location Address</div>
+                <div class="entry-value">3951 Denton Service Ln, College Park, MD 2074</div>
+                <div class="entry-header">Location Distance</div>
+                <div class="entry-value">1.2 mi</div>
+            </div>
+            -->
+            
+            
+        </div>
+    </div>
+
+
+
+    <div class="cards-container-header"> Popular Dining Areas</div>
+    <div class="stars-key">
+        <div class="key-item">
+            <span class="fa fa-star favorited"></span> 
+            <span>Favorited</span>
+        </div>
+        <div class="key-item">
+            <span class="fa fa-star"></span>
+            <span>Not Favorited</span>
+        </div>
+    </div>
+
+    
     <div class="cards-container">
         <div class="cards-row">
             <div class="card">
@@ -51,39 +91,57 @@
                     <div class="card-header-text">The Diner</div>
                 </div>
                 <div class="card-body">
-                    <div class="card-body-elm"><span> Address: </span> 1234 sample street</div>
-                    <div class="card-body-elm"><span> Distance: </span> 0.5 mi</div>
+                    <div class="card-body-elm">
+                        <span> Address </span> 
+                        <p> 7093 PREINKERT DR</p>    
+                     </div>
+                    <div class="card-body-elm">
+                        <span > Distance </span> 
+                        <p class = 'distance' id = 'distance-card-1' > unknown </p>   
+                    </div>
                 </div>
                 <div class="card-status">Open</div>
            </div>
     
            <div class="card">
                 <div class="card-header">
-                    <span class="fa fa-star favorited"></span>
-                    <div class="card-header-text">The Diner</div>
+                    <span class="fa fa-star"></span>
+                    <div class="card-header-text">South Campus</div>
                 </div>
                 <div class="card-body">
-                    <div class="card-body-elm"><span> Address: </span> 1234 sample street</div>
-                    <div class="card-body-elm"><span> Distance: </span> 0.5 mi</div>
+                    <div class="card-body-elm">
+                        <span> Address </span> 
+                        <p> 4121 FARM DR </p>  
+                    </div>
+                    <div class="card-body-elm">
+                        <span > Distance </span> 
+                        <p class = 'distance' id = 'distance-card-2'> unknown</p>   
+                    </div>
                 </div>
                 <div class="card-status">Open</div>
           </div>
     
           <div class="card">
                 <div class="card-header">
-                    <span class="fa fa-star favorited"></span>
-                    <div class="card-header-text">The Diner</div>
+                    <span class="fa fa-star"></span>
+                    <div class="card-header-text">251 North</div>
                 </div>
                 <div class="card-body">
-                    <div class="card-body-elm"><span> Address: </span> 1234 sample street</div>
-                    <div class="card-body-elm"><span> Distance: </span> 0.5 mi</div>
+                  
+                    <div class="card-body-elm">
+                        <span> Address </span> 
+                        <p> 3951 DENTON SERVICE LANE </p>  
+                    </div>
+                    <div class="card-body-elm">
+                        <span id = 'distance-card-2'> Distance </span> 
+                        <p class = 'distance' id = 'distance-card-3'> unknown</p>   
+                    </div>
                 </div>
                 <div class="card-status">Open</div>
           </div>    
           
         </div>
     </div>
-
 
 </body>
 </html>

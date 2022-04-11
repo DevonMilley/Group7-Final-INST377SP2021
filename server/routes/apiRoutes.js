@@ -2,13 +2,25 @@
 import express from 'express';
 import sequelize from 'sequelize';
 
+
 import db from '../database/initializeDB.js';
+import bpRoutes from './bpRoutes.js'
+import etRoutes from './etRoutes.js'
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
   res.send('Welcome to the UMD Dining API!');
 });
+
+
+/* BP Routes - Food */
+
+router.use('/food', bpRoutes);
+ 
+/* ET Routes - Dining Hall */
+
+router.use('/dining', etRoutes);
 
 /// /////////////////////////////////
 /// ////Dining Hall Endpoints////////
@@ -20,7 +32,7 @@ router.get('/dining', async (req, res) => {
     res.json(reply);
   } catch (err) {
     console.error(err);
-    res.error('Server error');
+    res.send('Server error');
   }
 });
 
@@ -35,7 +47,7 @@ router.get('/dining/:hall_id', async (req, res) => {
     res.json(hall);
   } catch (err) {
     console.error(err);
-    res.error('Server error');
+    res.send('Server error');
   }
 });
 

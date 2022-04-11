@@ -1,13 +1,17 @@
+/* Styles by Bryan Pham */
+
 /* Make navbar appear on the bottom */
 .navbar-container {
     display: flex;
-    width: 100vw;
+    width: 98.5vw;
+    margin: 0px;
     bottom: 0px;
     position: fixed;
     justify-content: center;
     background-color: #EB4949;
     padding: 20px 0px;
     z-index: 9;
+    border-bottom: 1px solid #EB4949;
 }
 .navbar {
     display: grid;
